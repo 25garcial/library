@@ -1,0 +1,8 @@
+.newBook{
+    border-radius: 10px;
+    background-color:lightgray;
+    border-width: 1px;
+}
+.newBook:hover{
+    background-color: rgb(170, 170, 170);
+}
