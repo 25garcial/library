@@ -6,3 +6,8 @@
 .newBook:hover{
     background-color: rgb(170, 170, 170);
 }
+.book{
+    background-color:green;
+    width:200px;
+    height: 250px;
+}
