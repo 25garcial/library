@@ -6,8 +6,29 @@
 .newBook:hover{
     background-color: rgb(170, 170, 170);
 }
-.book{
+.card{
     background-color:green;
     width:200px;
     height: 250px;
+    border-style:solid;
+    border-width:1.5px;
+    border-radius:10px;
+}
+.name{
+    display: block;
+    text-align: center;
+}
+.popUp{
+    position:fixed;
+    width:80%;
+    height:80%;
+    opacity:0%;
+    left:10%;
+    color:white;
+    top:10%;
+  
+}
+.On{
+    opacity:80%;
+    background-color: rgb(46, 46, 46);
 }

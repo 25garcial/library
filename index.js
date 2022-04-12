@@ -1,28 +1,39 @@
-function book(name,beenRead, author, pages, rating){
+function book(name,author, pages,beenRead){
 this.name=name;
 this.author=author;
 this.pages=pages;
 this.beenRead=beenRead;
-this.rating=rating
-return {author, pages, beenRead, rating}
 }
 function newBook(){
-   
-    
-        var createNewBook=new book(
-            prompt("what is the name of the book?"),
-            prompt("have you read the book?"),
-            prompt("What is the author of the book?"),
-            prompt("How many pages are in the book?"),
-            prompt("Rating from 1 to 5:"), 
-            )
-        var library= document.getElementsByClassName("library")[0]
-        alert("1")
-        var newBook= document.createElement("div")
-        newBook.classList.add("book")
-        alert("2")
-         newBook.textContent=`Name=${createNewBook.name} Author=${createNewBook.author} Pages=${createNewBook.pages} Read=${createNewBook.read} Rating=${createNewBook.rating}`;
-        alert("3")
-        library.appendChild(newBook)
-        alert("4")
+document.querySelector(".popUp").classList.add("On")
+
+    var newBook=new book()
+    var newCard=document.createElement("div")
+    newCard.classList.add("card")
 }
+function addCard(){
+    //adding the name
+    newCard.appendChild(document.createElement("a"))
+    newCard.lastElementChild.textContent=`Title=${newBook.name}`
+    newCard.lastElementChild.classList.add("name")
+    newCard.append(document.createElement("br"))
+    
+    //adding the author
+    newCard.appendChild(document.createElement("a"))
+    newCard.lastElementChild.textContent=`Author= ${newBook.author}`
+    newCard.lastElementChild.classList.add("author")
+    newCard.append(document.createElement("br"))
+    
+    //adding the pages
+    newCard.appendChild(document.createElement("a"))
+    newCard.lastElementChild.textContent=`number of pages= ${newBook.pages}`
+    newCard.lastElementChild.classList.add("pages")
+    newCard.append(document.createElement("br"))
+    
+    //adding the been read
+    newCard.appendChild(document.createElement("a"))
+    newCard.lastElementChild.textContent=`have you read this book?= ${newBook.beenRead}`
+    newCard.lastElementChild.classList.add("read")
+    newCard.append(document.createElement("br"))
+    document.querySelector(".library").appendChild(newCard)
+    }
