@@ -4,8 +4,13 @@ function book(name, author, pages, beenRead) {
     this.pages = pages;
     this.beenRead = beenRead;
   }
+
+  function deleteCard(e){
+e.target.parentElement=""
+  }
+
+
   function addCard(title, author, pages, read) {
-    alert("")
     //toggle class
     document.querySelector(".popUp").classList.toggle("On")
   
@@ -16,6 +21,11 @@ function book(name, author, pages, beenRead) {
     //create book
     var newBook = new book(title, author, pages, read)
    
+    //adding the minus button
+    var minus=document.createElement("button").classList.add("minusButton")
+    minus.addEventListener("click", deleteCard(e))
+    minus.textContent="-"
+    newCard.appendChild(minus)
   
     //adding the name
     newCard.appendChild(document.createElement("a"))
@@ -49,7 +59,11 @@ function book(name, author, pages, beenRead) {
     addCard(document.getElementsByName("title")[0].value, document.getElementsByName("author")[0].value, document.getElementsByName("pages")[0].value, document.getElementsByName("read")[0].value)
   })
 
-  
+
   function addClassOn(){
     document.querySelector(".popUp").classList.add("On")
   }
+
+
+
+  console.log("d")
