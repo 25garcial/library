@@ -4,12 +4,6 @@ function book(name, author, pages, beenRead) {
     this.pages = pages;
     this.beenRead = beenRead;
   }
-  
-  function newBook() {
-  
-  
-  }
-  
   function addCard(title, author, pages, read) {
     alert("")
     //toggle class
@@ -49,10 +43,13 @@ function book(name, author, pages, beenRead) {
     document.querySelector(".library").appendChild(newCard)
   }
   
+
+
   document.querySelector(".submit").addEventListener("click", function() {
     addCard(document.getElementsByName("title")[0].value, document.getElementsByName("author")[0].value, document.getElementsByName("pages")[0].value, document.getElementsByName("read")[0].value)
   })
+
+  
   function addClassOn(){
-     
     document.querySelector(".popUp").classList.add("On")
   }
