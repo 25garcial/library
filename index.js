@@ -52,6 +52,8 @@ function book(name, author, pages, beenRead) {
     newCard.lastElementChild.textContent = `have you read this book?= ${newBook.beenRead}`
     newCard.lastElementChild.classList.add("read")
     newCard.append(document.createElement("br"))
+
+    //adding card
     document.querySelector(".library").appendChild(newCard)
   }
   
