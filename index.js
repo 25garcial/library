@@ -6,7 +6,7 @@ function book(name, author, pages, beenRead) {
   }
 
   function deleteCard(e){
-e.target.parentElement=""
+
   }
 
 
@@ -22,8 +22,10 @@ e.target.parentElement=""
     var newBook = new book(title, author, pages, read)
    
     //adding the minus button
-    var minus=document.createElement("button").classList.add("minusButton")
-    minus.addEventListener("click", deleteCard(e))
+    var minus=document.createElement("button")
+    minus.classList.add("minusButton")
+    alert(minus)
+   minus.addEventListener("click", function(e){e.target.parentElement.remove()})
     minus.textContent="-"
     newCard.appendChild(minus)
   
@@ -66,4 +68,4 @@ e.target.parentElement=""
 
 
 
-  console.log("d")
+alert("d")
